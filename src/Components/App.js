@@ -6,16 +6,12 @@ import Header from './Layouts/Header'
 import Exercises from './Exercises'
 
 
-
-
-
-
 export default class extends Component {
 
 
   render(){
     return (
-    <Fragment id="container">
+    <Fragment>
       <Header />
       <Form />
       <Exercises />

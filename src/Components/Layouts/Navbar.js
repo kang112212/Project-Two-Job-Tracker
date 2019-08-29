@@ -4,15 +4,12 @@ import FolderIcon from '@material-ui/icons/Folder';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 
 
-
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#151a20",
     color: "#f3a850",
     '&$selected': {
       color: "white",
-
-
     }
   },
   selected: {}
@@ -20,7 +17,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function SimpleBottomNavigation() {
   const classes = useStyles()
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState('folder');
 
   return (
     <BottomNavigation
@@ -31,6 +28,7 @@ export default function SimpleBottomNavigation() {
       showLabels
       className={classes.root}
     >
+
       <BottomNavigationAction className={classes.root} label="New Prospect" value="folder" icon={<FolderIcon />} />
       <BottomNavigationAction className={classes.root} label="Current Prospects" icon={<FavoriteIcon />} />
     </BottomNavigation>

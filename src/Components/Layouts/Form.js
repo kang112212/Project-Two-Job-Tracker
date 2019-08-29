@@ -1,5 +1,6 @@
 import React from 'react';
-import { FormControl, Input, InputLabel, FormHelperText, FormControlLabel, makeStyles  } from '@material-ui/core';
+import { FormControl, Input, InputLabel, makeStyles  } from '@material-ui/core';
+import Exercises from '../Exercises/index'
 
 
 const useStyles = makeStyles(theme => ({
@@ -13,47 +14,57 @@ const useStyles = makeStyles(theme => ({
 outer: {
   backgroundColor: "#151a20",
   padding: '30px',
-}
+},
+inner: {
+  display: 'flex',
+  position: 'relative',
+  marginLeft: 'auto',
+  marginRight: 'auto',
+},
+
 }))
 
 export default function InputForm() {
     const classes = useStyles();
+
   return (
     <div className={classes.outer}>
   <FormControl className={classes.root}>
-    <InputLabel htmlFor="my-input">Job Title</InputLabel>
-    <Input id="my-input"  />
+    <InputLabel htmlFor="title--input" className={classes.inner}>Job Title</InputLabel>
+    <Input id="title-input" />
   </FormControl>
 
   <FormControl className={classes.root}>
-    <InputLabel htmlFor="my-input">Company Name</InputLabel>
-    <Input id="my-input"  />
+    <InputLabel htmlFor="company-input" className={classes.inner}>Company Name</InputLabel>
+    <Input id="company-input" />
   </FormControl>
 
   <FormControl className={classes.root}>
-    <InputLabel htmlFor="my-input">Url Address</InputLabel>
-    <Input id="my-input"  />
+    <InputLabel htmlFor="url-input" className={classes.inner}>Url Address</InputLabel>
+    <Input id="url-input" />
   </FormControl>
 
   <FormControl className={classes.root}>
-    <InputLabel htmlFor="my-input">Contact Name</InputLabel>
-    <Input id="my-input"  />
+    <InputLabel htmlFor="contact-input" className={classes.inner}>Contact Name</InputLabel>
+    <Input id="contact-input" />
   </FormControl>
 
   <FormControl className={classes.root}>
-    <InputLabel htmlFor="my-input">Email address</InputLabel>
-    <Input id="my-input"  />
+    <InputLabel htmlFor="email-input" className={classes.inner}>Email address</InputLabel>
+    <Input id="email-input" />
   </FormControl>
 
   <FormControl className={classes.root}>
-    <InputLabel htmlFor="my-input">LinkedIn Name</InputLabel>
-    <Input id="my-input"  />
+    <InputLabel htmlFor="linkedIn-input" className={classes.inner}>LinkedIn Name</InputLabel>
+    <Input id="linkedIn-input" />
   </FormControl>
 
   <FormControl className={classes.root}>
-    <InputLabel htmlFor="my-input">Phone #</InputLabel>
-    <Input id="my-input"  />
+    <InputLabel htmlFor="phone-input" className={classes.inner}>Phone #</InputLabel>
+    <Input id="phone-input" />
   </FormControl>
+
+  // <button onClick={this.state.clickFunc}> Click Me?</button>
 </div>
   )
 };
