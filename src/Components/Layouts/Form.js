@@ -1,6 +1,6 @@
 import React, {useState } from 'react';
 import { FormControl, Input, InputLabel, makeStyles  } from '@material-ui/core';
-import Exercises from '../Exercises/index'
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -26,26 +26,38 @@ button: {
   position: 'relative',
   marginLeft: 'auto',
   marginRight: 'auto',
-}
+  marginTop: '10px',
+  backgroundColor: '#f3a850',
+  borderColor: '#f3a850',
+  borderRadius: '10px',
+  padding: '10px',
+  fontSize: '14px'
+},
 }))
 let idArray = ['title-input', 'company-input', 'url-input', 'contact-input', 'email-input', 'linkedIn-input', 'phone-input']
-let inputArray = []
 
 
 export default function InputForm() {
-    const classes = useStyles();
-    const [useDataCollect] = useState([
+    let classes = useStyles();
+    let inputArray = []
+    let sessStorage = []
+    let [useDataCollect] = useState([
       {
         clickFunc: () => {
           for (let i=0; i<idArray.length; i++){
             inputArray[i] = document.getElementById(idArray[i]).value
           }
-          return console.log(inputArray)
+          let j = 0;
+            while (j>-1){
+              return sessStorage[j] = localStorage.setItem('label', inputArray);
+          j++;
+        }
       }
     }
     ])
 
   return (
+
     <div className={classes.outer}>
   <FormControl className={classes.root}>
     <InputLabel  className={classes.inner}>Job Title</InputLabel>
@@ -82,7 +94,10 @@ export default function InputForm() {
     <Input id="phone-input" className={classes.inner}/>
   </FormControl>
 
-<button className="classes.button" onClick={useDataCollect[0].clickFunc}> Click Me?</button>
+
+<button className={classes.button} onClick={useDataCollect[0].clickFunc}> Submit New Prospect</button>
+
 </div>
+
   )
 };
