@@ -8,19 +8,19 @@ import ProspectList from '../Layouts/ProspectList';
 
 export default class extends Component {
 
-
   render(){
-
+    let renderArr = this.props.prospectsArr.map((prospect)=>{
+      console.log(prospect.jobTitle)
+        return <div>{prospect.jobTitle}</div>
+    })
     return (
     <Fragment>
       <Header />
-      <MakeSpace />
+      <div>space </div>
+
+      <div>{renderArr}</div>
+
       <Navbar />
     </Fragment>
   )}
 }
-
-
- const MakeSpace = () => {
-   return <div> hello</div>
- }

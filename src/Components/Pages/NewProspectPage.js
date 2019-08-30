@@ -7,13 +7,16 @@ import { Link } from "react-router-dom";
 
 
 export default class extends Component {
+    constructor(props){
+        super(props);
+    }
 
 
   render(){
     return (
     <Fragment>
       <Header />
-      <Form />
+      <Form addProspectFunc={this.props.addProspectFunc}/>
       <Navbar />
     </Fragment>
   )}

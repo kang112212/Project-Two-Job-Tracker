@@ -11,10 +11,10 @@ render(){
   return (
     <div>
       <Link to={{
-      pathname: '/ExistProspectPage',
-      state: {
-        dataFromAbout: ["Jon Snow", "Peter Parker", "Clark Kent"]
-      }}}>
+        pathname: '/ExistProspectPage',
+        state: {
+          dataFromAbout: ["Jon Snow", "Peter Parker", "Clark Kent"]
+        }}}>
         <button> Existing Prospects</button>
       </Link>
 

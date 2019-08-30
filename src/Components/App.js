@@ -12,15 +12,37 @@ import {
 } from  "react-router-dom";
 
 export default class extends Component {
+  constructor(){
+    super();
+    this.state={
+      prospectsArr:[]
+    }
+  }
+  addProspect=(inputArr)=>{
+    this.setState({prospectsArr:[...this.state.prospectsArr, inputArr]});
+  }
   render(){
     return (
       <Router>
+
+
         <Switch>
-          <Route exact path ="/" component={NewProspectPage}/>
-          <Route path ="/ExistProspectPage" component={ExistProspectPage} />
-	      </Switch>
-	     </Router>
-  )}
+          <Route
+            exact
+            path="/"
+            render={props => <NewProspectPage addProspectFunc={this.addProspect} />}
+          />
+          <Route
+            path="/ExistProspectPage"
+            render={props => <ExistProspectPage {...props} prospectsArr={this.state.prospectsArr} />}
+          />
+        </Switch>
+
+
+
+      </Router>
+    )
+  }
 }
 
 // <Route exact path ="/404" component= {NotFoundPage}/>
