@@ -1,6 +1,8 @@
-import React, { Component } from 'react'
-import NewProspectPage from './Pages/NewProspectPage'
-import ExistProspectPage from './Pages/ExistProspectPage'
+import React, { Component } from 'react';
+import NewProspectPage from './Pages/NewProspectPage';
+import ExistProspectPage from './Pages/ExistProspectPage';
+import Navbar from './Layouts/Navbar';
+import Header from './Layouts/Header';
 
 
 import {
@@ -25,7 +27,7 @@ export default class extends Component {
     return (
       <Router>
 
-
+				<Header />
         <Switch>
           <Route
             exact
@@ -37,7 +39,7 @@ export default class extends Component {
             render={props => <ExistProspectPage {...props} prospectsArr={this.state.prospectsArr} />}
           />
         </Switch>
-
+				<Navbar />
 
 
       </Router>

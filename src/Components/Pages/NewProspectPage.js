@@ -15,9 +15,9 @@ export default class extends Component {
   render(){
     return (
     <Fragment>
-      <Header />
+    
       <Form addProspectFunc={this.props.addProspectFunc}/>
-      <Navbar />
+
     </Fragment>
   )}
 }

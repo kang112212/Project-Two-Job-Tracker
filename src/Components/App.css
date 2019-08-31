@@ -10,3 +10,28 @@
 /* .bdy {
   background-color: #151a20
 } */
+
+.list {
+  background-color: #151a20;
+  color: #f3a850;
+  min-height: 85vh;
+  margin-top: 20px;
+  padding-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#work {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+}
+
+.entry {
+  margin: 0 -5px;
+  text-align: left;
+}
+#entryTitles {
+  text-align: right;
+  margin-right: 2px;
+}

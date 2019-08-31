@@ -9,7 +9,8 @@ const useStyles = makeStyles(theme => ({
     margin: '10px auto 0px',
     maxWidth: '300px',
     position: 'relative',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+
   },
   outer: {
     backgroundColor: "#151a20",
@@ -24,9 +25,7 @@ const useStyles = makeStyles(theme => ({
   button: {
     display: 'flex',
     position: 'relative',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    marginTop: '10px',
+    margin: '5px auto 10px auto',
     backgroundColor: '#f3a850',
     borderColor: '#f3a850',
     borderRadius: '10px',
@@ -50,14 +49,13 @@ export default function InputForm(props) {
           }
 
           let prospectObj ={
-            'jobTitle': inputArray[0],
-            "Company Name": inputArray[1],
-            "Url Address": inputArray[2],
-            "Contact Name": inputArray[3],
-            "Email address": inputArray[4],
-            "LinkedIn Name": inputArray[5],
-            "Phone #": inputArray[6],
-
+            jobTitle: inputArray[0],
+            companyName: inputArray[1],
+            urlAddress: inputArray[2],
+            ContactName: inputArray[3],
+            emailAddress: inputArray[4],
+            linkedInName: inputArray[5],
+            phone: inputArray[6],
           }
 
           props.addProspectFunc(prospectObj);

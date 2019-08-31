@@ -1,29 +1,37 @@
-import React, { Component } from 'react';
-import ExistProspectPage from '../Layouts/Navbar';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { spinner } from '@fortawesome/free-brands-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { makeStyles, BottomNavigation, BottomNavigationAction } from '@material-ui/core';
+import FolderIcon from '@material-ui/icons/Folder';
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import { Link } from "react-router-dom";
 
+const useStyles = makeStyles(theme => ({
+  root: {
+    backgroundColor: "#151a20",
+    color: "#f3a850",
+    '&$selected': {
+      color: "white",
+    }
+  },
+  selected: {}
+}))
 
-export default class extends Component {
-render(){
-  return (
-    <div>
-      <Link to={{
-        pathname: '/ExistProspectPage',
-        state: {
-          dataFromAbout: ["Jon Snow", "Peter Parker", "Clark Kent"]
-        }}}>
-        <button> Existing Prospects</button>
-      </Link>
+export default function SimpleBottomNavigation() {
+  const classes = useStyles()
+  const [value, setValue] = React.useState('folder');
+return (
+  <BottomNavigation
+id="work"
+  value={value}
+  onChange={(event, newValue) => {
+    setValue(newValue);
+  }}
+  showLabels
+  className={classes.root} >
 
-      <Link to={{
-      pathname: '/',
-      }}>
-        <button>New Prospects</button>
-      </Link>
-    </div>
-    )
-  }
-}
+  <BottomNavigationAction className={classes.root} label="New Prospect" value="folder" icon={<FolderIcon />}  component={Link}
+  to="/" />
+
+ <BottomNavigationAction className={classes.root} label="Current Prospects" icon={<FavoriteIcon />}  component={Link} to="/ExistProspectPage"/>
+
+</BottomNavigation>
+) }
