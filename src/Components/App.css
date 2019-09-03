@@ -1,15 +1,9 @@
-/* #center {
-  display: flex;
-  margin: 0 auto;
-} */
-/* #hdBar {
-  background-color: #151a20
-} */
-
-
-/* .bdy {
-  background-color: #151a20
-} */
+.icons {
+  margin: 0px 2px;
+}
+.icons:hover {
+  color: green;
+}
 
 .list {
   background-color: #151a20;
@@ -21,7 +15,7 @@
   flex-wrap: wrap;
 }
 
-#work {
+#botNav {
   position: fixed;
   bottom: 0;
   width: 100vw;
@@ -31,7 +25,23 @@
   margin: 0 -5px;
   text-align: left;
 }
+.entryFont{
+  font-family: Garamond;
+  font-size: 1em;
+}
 #entryTitles {
   text-align: right;
   margin-right: 2px;
+  margin-left: 2px;
+  text-decoration: underline;
+
+}
+#entryBorder {
+  border: 1px solid black;
+  padding-right: 13px;
+padding-bottom: 60px;
+}
+
+#up {
+  margin-bottom: 100px;
 }

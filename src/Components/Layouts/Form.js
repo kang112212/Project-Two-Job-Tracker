@@ -1,5 +1,6 @@
 import React, {useState } from 'react';
 import { FormControl, Input, InputLabel, makeStyles  } from '@material-ui/core';
+import { Link } from "react-router-dom"
 
 
 
@@ -39,11 +40,9 @@ let idArray = ['title-input', 'company-input', 'url-input', 'contact-input', 'em
 export default function InputForm(props) {
     let classes = useStyles();
     let inputArray = []
-    let sessStorage = []
     let [useDataCollect] = useState([
       {
         clickFunc: () => {
-
           for (let i=0; i<idArray.length; i++){
             inputArray[i] = document.getElementById(idArray[i]).value
           }
@@ -60,11 +59,6 @@ export default function InputForm(props) {
 
           props.addProspectFunc(prospectObj);
 
-          // let j = 0;
-          // while (j>-1){
-          //   return sessStorage[j] = localStorage.setItem('label', inputArray);
-          //   j++;
-          // }
       }
     }
     ])
@@ -72,44 +66,44 @@ export default function InputForm(props) {
   return (
 
     <div className={classes.outer}>
-  <FormControl className={classes.root}>
-    <InputLabel  className={classes.inner}>Job Title</InputLabel>
-    <Input id="title-input" className={classes.inner}/>
-  </FormControl>
+      <FormControl className={classes.root}>
+        <InputLabel  className={classes.inner}>Job Title</InputLabel>
+        <Input id="title-input" className={classes.inner}/>
+      </FormControl>
 
-  <FormControl className={classes.root}>
-    <InputLabel  className={classes.inner}>Company Name</InputLabel>
-    <Input id="company-input" className={classes.inner}/>
-  </FormControl>
+      <FormControl className={classes.root}>
+        <InputLabel  className={classes.inner}>Company Name</InputLabel>
+        <Input id="company-input" className={classes.inner}/>
+      </FormControl>
 
-  <FormControl className={classes.root}>
-    <InputLabel  className={classes.inner}>Url Address</InputLabel>
-    <Input id="url-input" className={classes.inner}/>
-  </FormControl>
+      <FormControl className={classes.root}>
+        <InputLabel  className={classes.inner}>Url Address</InputLabel>
+        <Input id="url-input" className={classes.inner} />
 
-  <FormControl className={classes.root}>
-    <InputLabel className={classes.inner}>Contact Name</InputLabel>
-    <Input id="contact-input" className={classes.inner}/>
-  </FormControl>
+      </FormControl>
 
-  <FormControl className={classes.root}>
-    <InputLabel className={classes.inner}>Email address</InputLabel>
-    <Input id="email-input" className={classes.inner}/>
-  </FormControl>
+      <FormControl className={classes.root}>
+        <InputLabel className={classes.inner}>Contact Name</InputLabel>
+        <Input id="contact-input" className={classes.inner}/>
+      </FormControl>
 
-  <FormControl className={classes.root}>
-    <InputLabel  className={classes.inner}>LinkedIn Name</InputLabel>
-    <Input id="linkedIn-input" className={classes.inner}/>
-  </FormControl>
+      <FormControl className={classes.root}>
+        <InputLabel className={classes.inner}>Email address</InputLabel>
+        <Input id="email-input" className={classes.inner}/>
+      </FormControl>
 
-  <FormControl className={classes.root}>
-    <InputLabel  className={classes.inner}>Phone #</InputLabel>
-    <Input id="phone-input" className={classes.inner}/>
-  </FormControl>
+      <FormControl className={classes.root}>
+        <InputLabel  className={classes.inner}>LinkedIn Name</InputLabel>
+        <Input id="linkedIn-input" className={classes.inner}/>
+      </FormControl>
 
-
-<button className={classes.button} onClick={useDataCollect[0].clickFunc}> Submit New Prospect</button>
-
+      <FormControl className={classes.root}>
+        <InputLabel  className={classes.inner}>Phone #</InputLabel>
+        <Input id="phone-input" className={classes.inner}/>
+      </FormControl>
+      <Link to="/ExistProspectPage">
+        <button className={classes.button} onClick={useDataCollect[0].clickFunc}> Submit New Prospect</button>
+      </Link>
 </div>
 
   )

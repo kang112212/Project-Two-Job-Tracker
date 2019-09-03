@@ -1,35 +1,42 @@
 import React, { Component, Fragment } from 'react';
-import { Link } from "react-router-dom";
-import ProspectList from '../Layouts/ProspectList';
 
 
 
 export default class extends Component {
-  render(){
-    let p = 1
+  constructor(props){
+    super();
+    this.state = {
+      popIt: this.deleteArr,
+      style: 'visible',
+    }
+  }
+  deleteArr = () => {this.setState({style:'none'})}
 
+  render(){
+
+    let p = 0;
     let renderArr = this.props.prospectsArr.map((prospect)=>{
-      {p++}
+        {p++};
         return(
-      <div>
-          <h5 id="entryTitles">Prospect Entry {p}</h5>
-          <ul className="entry">
-            <li className="entry">{prospect.jobTitle}</li>
-            <li className="entry">{prospect.companyName}</li>
-            <li className="entry">{prospect.urlAddress}</li>
-            <li className="entry">{prospect.ContactName}</li>
-            <li className="entry">{prospect.emailAddress}</li>
-            <li className="entry">{prospect.linkedInName}</li>
-            <li className="entry">{prospect.phone}</li>
-          </ul>
+          <div id="entryBorder" style={{display: this.state.style}}>
+            <h5 id="entryTitles entryFont">Prospect Entry {p}</h5>
+            <ul className="entry entryFont">
+              <li className="entry entryFont">{prospect.jobTitle}</li>
+              <li className="entry entryFont">{prospect.companyName}</li>
+              <li className="entry entryFont">{prospect.urlAddress}</li>
+              <li className="entry entryFont">{prospect.ContactName}</li>
+              <li className="entry entryFont">{prospect.emailAddress}</li>
+              <li className="entry entryFont">{prospect.linkedInName}</li>
+              <li className="entry entryFont">{prospect.phone}</li>
+            </ul>
+            <button onClick={this.state.popIt}> Delete Prospect</button>
           </div>
         )
     })
     return (
     <Fragment>
-      <div className="border">
-        <div className="list" >{renderArr}</div>
-      </div>
+      <div className="list">{renderArr}</div>
     </Fragment>
   )}
+
 }

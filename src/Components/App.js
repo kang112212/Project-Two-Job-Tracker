@@ -9,8 +9,6 @@ import {
 	BrowserRouter as Router,
 	Route,
 	Switch,
-	Link,
-	Redirect
 } from  "react-router-dom";
 
 export default class extends Component {
@@ -38,15 +36,11 @@ export default class extends Component {
             path="/ExistProspectPage"
             render={props => <ExistProspectPage {...props} prospectsArr={this.state.prospectsArr} />}
           />
+			
         </Switch>
 				<Navbar />
-
 
       </Router>
     )
   }
 }
-
-// <Route exact path ="/404" component= {NotFoundPage}/>
-//
-//  <Redirect to = "/404"/>
