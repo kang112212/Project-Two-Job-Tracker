@@ -32,7 +32,8 @@ export default class extends Component {
             <button onClick={this.state.popIt}> Delete Prospect</button>
           </div>
         )
-    })
+    }
+  )
     return (
     <Fragment>
       <div className="list">{renderArr}</div>
