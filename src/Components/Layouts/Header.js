@@ -10,6 +10,9 @@ const useStyles = makeStyles(theme => ({
     margin: '0px auto 10px',
     paddingTop: "10px",
   },
+  head:{
+  color: "#f3a850",
+}
 }))
 
 
@@ -22,7 +25,7 @@ export default function ElevateAppBar(props) {
       <CssBaseline />
         <AppBar className={classes.root}>
           <Toolbar className={classes.root}>
-            <Icons />
+          <div className={classes.head}> <h1>Profesional Business Journal (PB&J)</h1> </div>
           </Toolbar>
         </AppBar>
       <Toolbar />

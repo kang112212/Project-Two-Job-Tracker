@@ -12,10 +12,13 @@ const useStyles = makeStyles(theme => ({
     position: 'relative',
     backgroundColor: 'white',
 
+
   },
   outer: {
     backgroundColor: "#151a20",
     padding: '30px',
+    minHeight: "90vh",
+    marginTop: '20px',
   },
   inner: {
     display: 'flex',
