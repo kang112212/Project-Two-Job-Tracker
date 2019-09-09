@@ -6,12 +6,10 @@ import Icons from './Icons'
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: "#151a20",
-    display: 'flex',
-    margin: '0px auto 10px',
-    paddingTop: "10px",
   },
   head:{
   color: "#f3a850",
+  textAlign: "center",
 }
 }))
 
@@ -23,7 +21,7 @@ export default function ElevateAppBar(props) {
   return (
     <React.Fragment>
       <CssBaseline />
-        <AppBar className={classes.root}>
+        <AppBar >
           <Toolbar className={classes.root}>
           <div className={classes.head}> <h1>Profesional Business Journal (PB&J)</h1> </div>
           </Toolbar>

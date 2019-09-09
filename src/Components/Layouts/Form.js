@@ -18,7 +18,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#151a20",
     padding: '30px',
     minHeight: "90vh",
-    marginTop: '20px',
+    marginTop: '30px',
+    marginBottom: '30px',
   },
   inner: {
     display: 'flex',
