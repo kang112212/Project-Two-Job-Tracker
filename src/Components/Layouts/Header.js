@@ -8,6 +8,8 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: "#151a20",
   },
   head:{
+  display: "flex",
+  margin: "auto",
   color: "#f3a850",
   textAlign: "center",
 }

@@ -18,7 +18,7 @@ export default class extends Component {
     let renderArr = this.props.prospectsArr.map((prospect)=>{
         {p++};
         return(
-          <div id="entryBorder" style={{display: this.state.style}}>
+          <div id="entryBorder {p}" style={{display: this.state.style}}>
             <h5 id="entryTitles entryFont">Prospect Entry {p}</h5>
             <ul className="entry entryFont">
               <li className="entry entryFont">{prospect.jobTitle}</li>
