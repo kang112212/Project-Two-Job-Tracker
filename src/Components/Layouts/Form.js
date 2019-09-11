@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   button: {
     display: 'flex',
     position: 'relative',
-    margin: '5px auto 10px auto',
+    margin: '5px auto 60px auto',
     backgroundColor: '#f3a850',
     borderColor: '#f3a850',
     borderRadius: '10px',
